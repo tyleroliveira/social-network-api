@@ -22,11 +22,8 @@ const reactionSchema = new Schema(
   {
     toJSON: {
       getters: true,
-      virtuals: true,
+      //virtuals: true,
     },
   }
 );
-reactionSchema.virtual("reactionCount").get(function () {
-  return this.reactions.length;
-});
 module.exports = reactionSchema;
